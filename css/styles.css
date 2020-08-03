@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.site-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 350px;
+  margin: auto auto;
+  max-height: 75px;
+}
+.menu-links {
+  display: flex;
+  justify-content: space-around;
+  width: 320px;
+}
+.menu-links > a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.main-logo {
+  height: 60px;
+}
+
+section.main {
+  background: #292540;
+  height: auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 70px 16px;
+}
+
+h2.main-title {
+  font-size: 40px;
+  margin: 0px;
+  text-align: center;
+}
+
+.input-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.download-section {
+  display: none;
+  padding: 20px 0;
+}
+.url-search {
+  padding: 14px;
+  width: 80%;
+  max-width: 600px;
+}
+#submit {
+  background: #a93289;
+  border: none;
+  border-radius: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.download-btn {
+  background: #8939ae;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  border-radius: 6px;
+}
+.download-btn:active {
+  background: #6e3588;
+  border: white 1px solid;
+}
+
+.error-msg {
+  display: none;
+  background: #1e1c29;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px white solid;
+}
+
+.first-guide,
+.scnd-guide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin: 40px 0;
+}
+
+.first-left > img,
+.scnd-right > img {
+  height: 350px;
+}
+
+.first-left,
+.scnd-right {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.first-right,
+.scnd-left {
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.scnd-guide {
+  background: #f9f9f9;
+  margin-bottom: 0;
+}
+
+footer {
+  color: white;
+  background: #8539b0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.footer-content {
+  display: flex;
+  margin: 30px 0;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.footer-menu > a {
+  color: #ffffffcc;
+  text-decoration: none;
+}
+.footer-menu {
+  display: flex;
+  width: 340px;
+  justify-content: space-evenly;
+}
+
+/* ------------- CSS LOADER ------------*/
+
+.spinner {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #f9af45;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* For Mobile Design */
+
+@media only screen and (max-width: 700px) {
+  .menu-links {
+    display: none;
+  }
+  .site-info {
+    justify-content: center;
+  }
+  .first-guide {
+    flex-direction: column-reverse;
+  }
+
+  .scnd-guide {
+    flex-direction: column;
+  }
+  .first-left > img,
+  .scnd-right > img {
+    width: 80%;
+  }
+  .footer-content {
+    margin: 10px 0;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 85px;
+    flex-direction: column;
+  }
+}
